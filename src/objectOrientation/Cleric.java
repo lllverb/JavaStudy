@@ -3,9 +3,20 @@ package objectOrientation;
 public class Cleric {
 	String name;
 	int hp = 50;
-	final int MAX_HP = 50;
-	int mp = 9;
-	final int MAX_MP = 10;
+	static final int MAX_HP = 50;
+	int mp = 10;
+	static final int MAX_MP = 10;
+	Cleric(String name, int hp, int mp){
+		this.name = name;
+		this.hp = hp;
+		this.mp = mp;
+	}
+	Cleric(String name, int hp){
+		this(name, hp, Cleric.MAX_MP);
+	}
+	Cleric(String name){
+		this(name, Cleric.MAX_HP, Cleric.MAX_MP);
+	}
 	void selfAid() {
 		System.out.println(this.name + "はセルフエイドを唱えた");
 		this.mp -= 5;
@@ -21,7 +32,7 @@ public class Cleric {
 		} else {
 			this.mp = MAX_MP;
 		}
-		System.out.println("MPが" + this.mp + "になった");
+		System.out.println("MPが" + this.mp + "になった");//あってる
 		return recovery;
 	}
 }
