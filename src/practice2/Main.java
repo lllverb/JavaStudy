@@ -27,7 +27,7 @@ public class Main {
 //		System.out.println(System.getProperty("java.version"));
 //		Properties p = System.getProperties();
 //		final String BR = System.getProperty("line.separator");
-//		Iterator<String> i = p.stringPropertyNames().iterator();
+//		Iterator<String> i = p.stringPropertyNames().itera8tor();
 //		System.out.println("システム" + BR + "プロパティ一覧");
 //		while(i.hasNext()) {
 //			String key = i.next();
